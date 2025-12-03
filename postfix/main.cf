@@ -1,0 +1,11 @@
+mydestination =
+myorigin = uncached.org
+relayhost = [email-smtp.us-west-1.amazonaws.com]:587
+
+smtp_tls_security_level = encrypt
+smtp_tls_CApath=/etc/ssl/certs
+
+smtp_sasl_auth_enable = yes
+smtp_sasl_security_options = noanonymous
+smtp_sasl_password_maps = hash:/config/postfix/sasl_passwd
+authorized_submit_users = root, karl, www-data

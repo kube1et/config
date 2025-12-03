@@ -1,0 +1,7 @@
+disabled_commands:
+  - db drop
+  - db reset
+  - site empty
+
+require:
+  - /config/misc/wp-cli-logging.php

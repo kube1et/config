@@ -1,0 +1,14 @@
+/sites/*/logs/*.log
+{
+	rotate 14
+	daily
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		invoke-rc.d nginx rotate
+		invoke-rc.d php8.3-fpm reopen-logs
+	endscript
+}

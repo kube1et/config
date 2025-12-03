@@ -1,0 +1,1 @@
+alias wp='sudo --preserve-env=WP_CLI_CONFIG_PATH -u www-data -- /usr/local/bin/wp'

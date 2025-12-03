@@ -1,0 +1,13 @@
+[mysqld]
+max_statement_time = 30
+
+innodb_buffer_pool_size = 512M
+innodb_log_file_size = 512M
+innodb_io_capacity = 5000
+innodb_io_capacity_max = 20000
+
+slow_query_log = 1
+long_query_time = 5
+slow_query_log_file = /var/log/mariadb-slow.log
+
+[client]

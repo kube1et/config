@@ -1,0 +1,5 @@
+# Update WP-CLI
+17 0 * * * root /usr/local/bin/wp cli update --yes --quiet
+
+# WordPress Cron
+* * * * * www-data flock -n /sites/uncached.org/wp-cron.lock wp --path=/sites/uncached.org/public_html cron event run --due-now 2>&1 | ts >> /sites/uncached.org/logs/cron.log
